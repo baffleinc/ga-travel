@@ -1,0 +1,13 @@
+<div class="home">
+	<form name="tripForm" ng-submit="main.saveTrip(tripForm.$valid)" ng-hide="main.storage.trip.saved">
+		<p><input type="text" name="tripTitle" ng-model="main.storage.trip.title" required></p>
+		<p><input type="text" name="tripDate" ng-model="main.storage.trip.date" required></p>
+		<p><button type="submit">Save Trip</button></p>
+	</form>
+	<ul ng-show="main.storage.trip.saved">
+		<li class="title">
+			<h2>{{ main.storage.trip.title }}</h2>
+			<p><em>{{ main.storage.trip.date }}</em></p>
+		</li>
+	</ul>
+</div>
